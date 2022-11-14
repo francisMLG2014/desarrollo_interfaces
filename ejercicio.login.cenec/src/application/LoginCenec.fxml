@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<BorderPane prefHeight="500.0" prefWidth="394.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/18" fx:controller="application.LoginCenecController">
+   <center>
+      <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label alignment="CENTER" text="Iniciar Sesión">
+               <padding>
+                  <Insets bottom="40.0" />
+               </padding>
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" text="Usuario" />
+            <TextField fx:id="user" maxWidth="220.0" />
+            <Label text="Contraseña" />
+            <PasswordField fx:id="pass" maxWidth="220.0" />
+            <Button fx:id="btnLogin" mnemonicParsing="false" onAction="#iniciarSesion" text="Button">
+               <VBox.margin>
+                  <Insets bottom="40.0" top="40.0" />
+               </VBox.margin>
+            </Button>
+            <Label fx:id="labelMsg" />
+         </children>
+      </VBox>
+   </center>
+   <top>
+      <ImageView fx:id="foto" fitHeight="148.0" fitWidth="165.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+         <image>
+            <Image url="@../images/cenec.jpg" />
+         </image>
+         <BorderPane.margin>
+            <Insets bottom="40.0" top="40.0" />
+         </BorderPane.margin>
+      </ImageView>
+   </top>
+</BorderPane>
