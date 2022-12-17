@@ -1,0 +1,46 @@
+.MenuBar{
+	-fx-background-color:#B40072;
+	-fx-text-fill:white;
+}
+*{
+							
+	-fx-color:#B40072;
+	-fx-text-fill:#D1CCBF;
+	-fx-background:#801659;
+}
+
+
+.Button{
+	-fx-background-color:#B40072;
+	-fx-text-fill:#D1CCBF;
+}
+.Button:hover{
+	-fx-background-color:#3E0028;
+	-fx-text-fill:#D1CCBF;
+	
+}
+
+.ChoiceBox{
+	-fx-background-color:#B40072;
+	-fx-text-fill:white;
+	 -fx-control-inner-background:#B66A9A;
+}
+
+.ChoiceBox:hover{
+	-fx-background-color:#3E0028;
+	-fx-text-fill:white;
+}
+.TextField{
+	-fx-background-color:#B66A9A;
+}
+
+.TableView{
+	-fx-background-color:#B66A9A;	
+}
+.TableColumn{
+	-fx-color:#B66A9A;
+	
+}
+
+
+

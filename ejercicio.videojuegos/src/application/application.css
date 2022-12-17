@@ -1,8 +1,5 @@
 .button{
-	-fx-background-color:blue;
-	-fx-font-size:12pt;
-	-fx-text-fill:lightblue;
-}
-#panel-grande{
-	-fx-background-color:lightblue;
+	-fx-background-color:red;
+	-fx-font-size:10pt;
+	-fx-text-fill:white;
 }

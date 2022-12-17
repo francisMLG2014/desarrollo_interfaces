@@ -5,7 +5,6 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
-<?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.SplitPane?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
@@ -17,25 +16,11 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@application.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.IndexController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" styleClass="BorderPane" stylesheets="@application.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SampleController">
    <top>
-      <MenuBar BorderPane.alignment="CENTER">
+      <MenuBar prefHeight="0.0" prefWidth="600.0" styleClass="MenuBar" stylesheets="@application.css" BorderPane.alignment="CENTER">
         <menus>
-          <Menu mnemonicParsing="false" text="File">
-            <items>
-              <MenuItem mnemonicParsing="false" text="Close" />
-            </items>
-          </Menu>
-          <Menu mnemonicParsing="false" text="Edit">
-            <items>
-              <MenuItem mnemonicParsing="false" text="Delete" />
-            </items>
-          </Menu>
-          <Menu mnemonicParsing="false" text="Help">
-            <items>
-              <MenuItem mnemonicParsing="false" text="About" />
-            </items>
-          </Menu>
+          <Menu id="Menu-hola" mnemonicParsing="false" text="Hola" />
         </menus>
       </MenuBar>
    </top>
@@ -44,16 +29,16 @@
         <items>
           <AnchorPane id="panel-izq" minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
                <children>
-                  <BorderPane layoutX="48.0" layoutY="87.0" prefHeight="373.0" prefWidth="296.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <BorderPane layoutX="48.0" layoutY="87.0" prefHeight="373.0" prefWidth="296.0" styleClass="BorderPane" stylesheets="@application.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <top>
-                        <Label text="Nuevo Libro" BorderPane.alignment="CENTER">
+                        <Label text="Nuevo Anime" BorderPane.alignment="CENTER">
                            <font>
                               <Font name="System Italic" size="25.0" />
                            </font>
                         </Label>
                      </top>
                      <center>
-                        <GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="258.0" prefWidth="255.0" BorderPane.alignment="CENTER">
+                        <GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="258.0" prefWidth="255.0" stylesheets="@application.css" BorderPane.alignment="CENTER">
                           <columnConstraints>
                             <ColumnConstraints hgrow="SOMETIMES" maxWidth="122.0" minWidth="10.0" prefWidth="80.0" />
                             <ColumnConstraints hgrow="SOMETIMES" maxWidth="184.0" minWidth="10.0" prefWidth="175.0" />
@@ -65,14 +50,14 @@
                               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                           </rowConstraints>
                            <children>
-                              <Label text="Título" />
-                              <Label text="Editorial" GridPane.rowIndex="1" />
-                              <Label text="Autor/a" GridPane.rowIndex="2" />
-                              <Label text="Páginas" GridPane.rowIndex="3" />
-                              <TextField fx:id="txtTitulo" GridPane.columnIndex="1" />
-                              <ChoiceBox fx:id="chbEditorial" prefHeight="25.0" prefWidth="201.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                              <TextField fx:id="txtAutor" prefHeight="25.0" prefWidth="222.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                              <TextField fx:id="txtPaginas" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                              <Label text="Nombre" />
+                              <Label text="Estudio" GridPane.rowIndex="1" />
+                              <Label text="Temporadas" GridPane.rowIndex="2" />
+                              <Label text="En emision" GridPane.rowIndex="3" />
+                              <ChoiceBox fx:id="chbEn_emision" prefHeight="25.0" prefWidth="210.0" styleClass="ChoiceBox" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                              <TextField fx:id="txtNombre" prefHeight="25.0" prefWidth="209.0" styleClass="TextField" stylesheets="@application.css" GridPane.columnIndex="1" />
+                              <ChoiceBox fx:id="chbEstudio" prefHeight="25.0" prefWidth="194.0" styleClass="ChoiceBox" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <TextField fx:id="txtTemporadas" prefHeight="25.0" prefWidth="296.0" styleClass="TextField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                            </children>
                         </GridPane>
                      </center>
@@ -91,8 +76,8 @@
                             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                           </rowConstraints>
                            <children>
-                              <Button fx:id="btnAnadir" mnemonicParsing="false" onAction="#anadirLibro" prefHeight="59.0" prefWidth="59.0" text="Añadir" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                              <Button fx:id="btnBorrar" mnemonicParsing="false" onAction="#borrarLibro" prefHeight="47.0" prefWidth="98.0" text="Borrar" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                              <Button fx:id="btnAnadir" mnemonicParsing="false" onAction="#anadirAnime" prefHeight="35.0" prefWidth="68.0" styleClass="Button" stylesheets="@application.css" text="Añadir" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <Button fx:id="btnBorrar" mnemonicParsing="false" onAction="#borrarAnime" prefHeight="47.0" prefWidth="98.0" styleClass="Button" stylesheets="@application.css" text="Borrar" GridPane.columnIndex="3" GridPane.rowIndex="1" />
                            </children>
                         </GridPane>
                      </bottom>
@@ -103,19 +88,19 @@
                <children>
                   <BorderPane layoutX="48.0" layoutY="55.0" prefHeight="373.0" prefWidth="296.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <top>
-                        <Label text="Listado de Libros" BorderPane.alignment="CENTER">
+                        <Label text="Listado de Animes" BorderPane.alignment="CENTER">
                            <font>
                               <Font name="System Italic" size="25.0" />
                            </font>
                         </Label>
                      </top>
                      <center>
-                        <TableView fx:id="tableLibro" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                        <TableView fx:id="tableAnime" prefHeight="200.0" prefWidth="200.0" styleClass="TableView" stylesheets="@application.css" BorderPane.alignment="CENTER">
                           <columns>
-                            <TableColumn fx:id="columnTitulo" prefWidth="75.0" text="Titulo" />
-                            <TableColumn fx:id="columnEditorial" prefWidth="75.0" text="Editorial" />
-                              <TableColumn fx:id="columnAutor" prefWidth="97.0" text="Autor" />
-                              <TableColumn fx:id="columnPaginas" prefWidth="53.0" text="Paginas" />
+                            <TableColumn fx:id="columnNombre" prefWidth="92.0" styleClass="TableColumn" text="Nombre" />
+                            <TableColumn fx:id="columnEstudio" prefWidth="83.0" styleClass="TableColumn" text="Estudio" />
+                              <TableColumn fx:id="columnTemporadas" prefWidth="115.0" styleClass="TableColumn" text="Temporadas" />
+                              <TableColumn fx:id="columnEn_emision" prefWidth="105.0" styleClass="TableColumn" text="En emision" />
                           </columns>
                         </TableView>
                      </center>

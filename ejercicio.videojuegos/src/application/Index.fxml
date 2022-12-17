@@ -17,7 +17,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@application.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.IndexController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@application.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SampleController">
    <top>
       <MenuBar BorderPane.alignment="CENTER">
         <menus>
@@ -46,7 +46,7 @@
                <children>
                   <BorderPane layoutX="48.0" layoutY="87.0" prefHeight="373.0" prefWidth="296.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <top>
-                        <Label text="Nuevo Libro" BorderPane.alignment="CENTER">
+                        <Label text="Nuevo Juego" BorderPane.alignment="CENTER">
                            <font>
                               <Font name="System Italic" size="25.0" />
                            </font>
@@ -65,14 +65,14 @@
                               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                           </rowConstraints>
                            <children>
-                              <Label text="Título" />
-                              <Label text="Editorial" GridPane.rowIndex="1" />
-                              <Label text="Autor/a" GridPane.rowIndex="2" />
-                              <Label text="Páginas" GridPane.rowIndex="3" />
-                              <TextField fx:id="txtTitulo" GridPane.columnIndex="1" />
-                              <ChoiceBox fx:id="chbEditorial" prefHeight="25.0" prefWidth="201.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                              <TextField fx:id="txtAutor" prefHeight="25.0" prefWidth="222.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                              <TextField fx:id="txtPaginas" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                              <Label text="Nombre" />
+                              <Label text="Precio" GridPane.rowIndex="1" />
+                              <Label text="Consola" GridPane.rowIndex="2" />
+                              <Label text="PEGI" GridPane.rowIndex="3" />
+                              <ChoiceBox fx:id="chbPEGI" prefHeight="25.0" prefWidth="210.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                              <ChoiceBox fx:id="chbConsola" prefHeight="25.0" prefWidth="196.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <TextField fx:id="txtNombre" prefHeight="25.0" prefWidth="209.0" GridPane.columnIndex="1" />
+                              <TextField fx:id="txtPrecio" prefHeight="25.0" prefWidth="203.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                            </children>
                         </GridPane>
                      </center>
@@ -91,8 +91,8 @@
                             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                           </rowConstraints>
                            <children>
-                              <Button fx:id="btnAnadir" mnemonicParsing="false" onAction="#anadirLibro" prefHeight="59.0" prefWidth="59.0" text="Añadir" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                              <Button fx:id="btnBorrar" mnemonicParsing="false" onAction="#borrarLibro" prefHeight="47.0" prefWidth="98.0" text="Borrar" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                              <Button fx:id="btnAnadir" mnemonicParsing="false" onAction="#anadirJuego" prefHeight="35.0" prefWidth="68.0" text="Añadir" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <Button fx:id="btnBorrar" mnemonicParsing="false" onAction="#borrarJuego" prefHeight="47.0" prefWidth="98.0" text="Borrar" GridPane.columnIndex="3" GridPane.rowIndex="1" />
                            </children>
                         </GridPane>
                      </bottom>
@@ -103,19 +103,19 @@
                <children>
                   <BorderPane layoutX="48.0" layoutY="55.0" prefHeight="373.0" prefWidth="296.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <top>
-                        <Label text="Listado de Libros" BorderPane.alignment="CENTER">
+                        <Label text="Listado de Juegos" BorderPane.alignment="CENTER">
                            <font>
                               <Font name="System Italic" size="25.0" />
                            </font>
                         </Label>
                      </top>
                      <center>
-                        <TableView fx:id="tableLibro" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                        <TableView fx:id="tableJuego" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
                           <columns>
-                            <TableColumn fx:id="columnTitulo" prefWidth="75.0" text="Titulo" />
-                            <TableColumn fx:id="columnEditorial" prefWidth="75.0" text="Editorial" />
-                              <TableColumn fx:id="columnAutor" prefWidth="97.0" text="Autor" />
-                              <TableColumn fx:id="columnPaginas" prefWidth="53.0" text="Paginas" />
+                            <TableColumn fx:id="columnNombre" prefWidth="75.0" text="Nombre" />
+                            <TableColumn fx:id="columnPrecio" prefWidth="75.0" text="Precio" />
+                              <TableColumn fx:id="columnConsola" prefWidth="97.0" text="Consola" />
+                              <TableColumn fx:id="columnPEGI" prefWidth="53.0" text="PEGI" />
                           </columns>
                         </TableView>
                      </center>
